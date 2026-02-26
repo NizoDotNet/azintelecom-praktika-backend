@@ -7,15 +7,18 @@ users:
 
 games:
     uuid
-    team1_id(team)
-    team2_id(team)
+    oppenent_id(team)
     datetime
+    is_home
     score_id(score)
 
 scores:
     score_id
     game_id
+    oppenent_score
+    team2_score
 
+// TODO: redsign
 tickets:
     uuid
     game_id
@@ -43,6 +46,8 @@ player:
     position_id(position)
     main_roster(boolean)
     ...
+
+player_stats
 
 position:
     id
