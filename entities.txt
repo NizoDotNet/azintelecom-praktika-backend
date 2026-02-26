@@ -1,0 +1,93 @@
+users:
+    uuid
+    email
+    name
+    surname
+    password(encrypted)
+
+games:
+    uuid
+    team1_id(team)
+    team2_id(team)
+    datetime
+    score_id(score)
+
+scores:
+    score_id
+    game_id
+
+tickets:
+    uuid
+    game_id
+    row
+    col
+    ticket_type
+    price
+    is_avaible(boolean)
+
+ticket_purchase:
+    user_id?
+    ticket_id
+
+
+team:
+    uuid
+    name
+
+player:
+    uuid
+    name
+    surname
+    middlename
+    number
+    position_id(position)
+    main_roster(boolean)
+    ...
+
+position:
+    id
+    name
+
+coths:
+    uuid 
+    name
+    date(string)
+
+clothes_stock:
+    clother_id(clothes)
+    size_id
+    stock(count)
+
+size:
+    id
+    name
+
+news:
+    uuid
+    title
+    description
+    date
+
+club_forum_disccussions:
+    uuid
+    date
+
+club_forum_disccussions_comments:
+    uuid
+    user_id
+    text
+    datetime
+
+achievements:
+    id
+    title
+    date(string)
+
+achievement_achivements_type:
+    achievement_id
+    achievement_type
+
+achievement_type:
+    id
+    name
+    date(string)
