@@ -16,7 +16,7 @@ scores:
     score_id
     game_id
     oppenent_score
-    team2_score
+    team_score
 
 // TODO: redsign
 tickets:
@@ -44,7 +44,6 @@ player:
     middlename
     number
     position_id(position)
-    main_roster(boolean)
     ...
 
 player_stats
@@ -53,13 +52,13 @@ position:
     id
     name
 
-coths:
+products:
     uuid 
     name
-    date(string)
+    season(string)
 
 clothes_stock:
-    clother_id(clothes)
+    product_id(clothes)
     size_id
     stock(count)
 
@@ -95,4 +94,21 @@ achievement_achivements_type:
 achievement_type:
     id
     name
-    date(string)
+
+
+vacancy:
+    id
+    title
+    details
+    start_date
+    end_date
+
+vacancy_request:
+    id
+    vacancy_id(vacancy)
+    name
+    surname
+    email
+    phone_number
+    about_me
+    
