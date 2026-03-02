@@ -12,6 +12,29 @@ games:
     is_home
     score_id(score)
 
+seats:
+seat_no
+row_id
+
+rows:
+row_no
+sector_id
+
+sectors:
+sector_no
+stadium_id
+
+stadiums:
+name
+.....
+
+
+game_seats:
+game_id
+seat_id
+is_available
+
+
 scores:
     score_id
     game_id
@@ -111,4 +134,9 @@ vacancy_request:
     email
     phone_number
     about_me
+
+
+
+
+
     
