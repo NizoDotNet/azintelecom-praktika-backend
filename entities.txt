@@ -11,28 +11,36 @@ games:
     datetime
     is_home
     score_id(score)
+    game_type
 
 seats:
-seat_no
-row_id
+    uuid
+    seat_no
+    row_id
 
 rows:
-row_no
-sector_id
+    uuid
+    row_no
+    sector_id
 
 sectors:
-sector_no
-stadium_id
+    uuid
+    sector_no
+    stadium_id
 
 stadiums:
-name
-.....
+    uuid
+    name
+    location
+    team_id
 
 
 game_seats:
-game_id
-seat_id
-is_available
+    uuid
+    game_id
+    seat_id
+    is_available
+    price
 
 
 scores:
@@ -41,25 +49,19 @@ scores:
     oppenent_score
     team_score
 
-// TODO: redsign
 tickets:
     uuid
-    game_id
-    row
-    col
-    ticket_type
-    price
-    is_avaible(boolean)
+    game_seat_id
 
 ticket_purchase:
     user_id?
     ticket_id
 
-
 team:
     uuid
     name
 
+//updated
 player:
     uuid
     name
@@ -67,9 +69,23 @@ player:
     middlename
     number
     position_id(position)
-    ...
+    debut_date
+    signing_date
+    birth_date
+    birth_place
+    transfer_price
 
-player_stats
+player_games:
+    uuid
+    game_id
+    player_id
+    is_starter
+
+player_game_stats:
+    uuid    
+    player_game_id
+    contribution_type(goal/assist)
+    minute
 
 position:
     id
